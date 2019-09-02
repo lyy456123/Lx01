@@ -13,11 +13,11 @@ UserIng nvarchar(250)
 GO
 CREATE TABLE Activity
 {
-ActivityID int(4) not null Primary key,
+ActivityID int Primary key auto_increment,
 ActivityName nvarchar(125) not null,
 EndTime datetime(8),
 ActivityPicture nvarchar(250) not null,
-ActivityIntroduction nvarchar(MAX),
+ActivityIntroduction nvarchar(8000),
 Summary nvarchar(250),
 ActivityVerify nchar(10) not null,
 ActivityStatus nchar(10),
@@ -26,11 +26,11 @@ UserName nvarchar(50) not NULL
 GO
 CREATE TABLE WorkInfo
 (
-WorkID int(4) not null Primary key ,
+WorkId int Primary key auto_increment,
 WorkName nvarchar(50) not null,
 WorkPicture nvarchar(250) not null,
 UploadTime datatime(8) not null,
-WorkIntrodution nvarchar(MAX),
+WorkIntrodution nvarchar(8000),
 WorkVerify nchar(10) not null,
 UserName nvarchar(50) not null,
 ActivityName nvarchar(125),
@@ -40,16 +40,16 @@ RecommendTime datatime(8)
 GO
 CREATE TABLE Comment
 (
-CommentID int(4) not null Primary key,
+CommentID int Primary key auto_increment,
 WorkID int(4) not null,
 WorkName nvarchar(50) not null,
 UserName nvarchar(50) not null,
-CommentContent nvarchar(MAX£© not null£¬
+CommentContent nvarchar(8000) not null,
 CommentTime datetime(8) not NULL);
 GO
 CREATE TABLE Image
 (
-ImgID int(4) not null PRIMARY KEY,
+ImgID int Primary key auto_increment,
 imgUrl nvarchar(50) not null,
 imgtext nvarchar(50) not null,
 imglink nvarchar(100) not null,
