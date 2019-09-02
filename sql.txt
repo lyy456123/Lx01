@@ -54,7 +54,8 @@ imgUrl nvarchar(50) not null,
 imgtext nvarchar(50) not null,
 imglink nvarchar(100) not null,
 imgalt nvarchar(50) not null);
-ALTER TABLE WorkInfo
-ADD FOREIGN KEY(UserName) REFERENCES UserInfo(UserName);
+ActivityID int Primary key auto_increment,
+ActivityVerify nchar(10) not null DEFAULT '待审核';
+
 
 
